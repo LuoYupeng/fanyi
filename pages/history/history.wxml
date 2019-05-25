@@ -1,0 +1,10 @@
+<scroll-view scroll-y class="container">
+  <view class="history-list">
+    <view class="title">翻译历史</view>
+    <view class="item" wx:for="{{history}}" wx:key="index" bindtap="onTapItem" data-query="{{item.query}}" data-langId="{{item.langIndex}}">
+      <view class="query">{{item.query}}</view>
+      <view clase="result">{{item.result}}</view>
+    </view>    
+  </view>
+  <view class="clear" bindtap="clearItem">清空历史</view>
+</scroll-view>
